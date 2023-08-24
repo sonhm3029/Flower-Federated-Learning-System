@@ -96,7 +96,7 @@ def main() -> None:
 
     # Start client
     client = CifarClient(model, trainloader, testloader, num_examples)
-    fl.client.start_numpy_client(server_address="localhost:8000", client=client)
+    fl.client.start_numpy_client(server_address="localhost:9904", client=client)
 
 
 if __name__ == "__main__":

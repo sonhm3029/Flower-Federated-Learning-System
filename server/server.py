@@ -17,7 +17,9 @@ class CustomStrategy(fl.server.strategy.FedAvg):
         failures: List[Union[Tuple[ClientProxy, FitRes], BaseException]],
     ) -> Tuple[Optional[Parameters], Dict[str, Scalar]]:
     
+    
         aggregated_parameters, aggregated_metrics = super().aggregate_fit(server_round, results, failures)
+        print(aggregated_parameters)
 
         return aggregated_parameters, aggregated_metrics
 
